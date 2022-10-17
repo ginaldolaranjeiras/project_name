@@ -19,15 +19,18 @@ func main() {
 
 	contaDoGino := conta.Conta{
 		Numero:  "123456",
-		Saldo:   1000,
 		Titular: gino,
 	}
 
 	contaDaAmanda := conta.Conta{
 		Numero:  "654321",
-		Saldo:   2000,
 		Titular: amanda,
 	}
 
 	fmt.Println(contaDoGino, contaDaAmanda)
+
+	contaDoGino.Depositar(100)
+	contaDaAmanda.Depositar(20)
+
+	fmt.Println(contaDoGino.ObterSaldo(), contaDaAmanda.ObterSaldo())
 }
